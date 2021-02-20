@@ -22,7 +22,7 @@ disp(Wpc);
 result
 
 enter the numerator coefficients---->[50 50]
-enter the denominator coefficients---->[1 8 15]
+enter the denominator coefficients---->[1 8 15 0 ]
 
  Inf
 
