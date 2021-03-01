@@ -20,4 +20,4 @@ xlabel('time');
 ylabel('amplitude');
 title('Half wave rectifier with L load');
 grid;
-legend('v0','io');
+legend('v0','i0');

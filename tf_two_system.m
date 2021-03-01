@@ -16,7 +16,7 @@ disp('system 1');
 g1=tf([num_cof1],[den_cof1])
 num_cof2=[0 4];den_cof2=[1 6];
 disp('system 2');
-g1=tf([num_cof2],[den_cof2])
+g2=tf([num_cof2],[den_cof2])
 [num_cofc,den_cofc]=series(num_cof1,den_cof1,num_cof2,den_cof2);
 disp('---------------cascade system---------------');
 gc=tf([num_cofc],[den_cofc])
@@ -43,7 +43,7 @@ Continuous-time transfer function.
 
 system 2
 
-g1 =
+g2 =
  
     4
   -----

@@ -8,8 +8,8 @@ clc;clear all;close all;
 % initialzations
 num=input('enter the numerator coefficients---->');
 den=input('enter the denominator coefficients---->');
-sys=tf(num,den);
-nyquist(sys);
+sys=tf(num,den)  
+nyquist(sys)
 title('Nyquist Plot');
 [Gm,Pm,Wgc,Wpc]=margin(sys);
 disp(Gm);
@@ -22,15 +22,23 @@ disp(Wpc);
 result
 
 enter the numerator coefficients---->[50 50]
-enter the denominator coefficients---->[1 8 15 0 ]
+enter the denominator coefficients---->[1 8 15 0]
 
- Inf
+sys =
+ 
+      50 s + 50
+  ------------------
+  s^3 + 8 s^2 + 15 s
+ 
+Continuous-time transfer function.
 
-   98.0516
+   Inf
 
-   NaN
+   57.8920
 
-   49.6681
+   Inf
+
+    5.8608
 
 
 %}

@@ -8,9 +8,9 @@ clc;clear all;close all;
 % initialzations
 k=input('enter the gain---->');
 z=input('enter the zeros---->');
-p=input('enter the ploes---->');
+p=input('enter the poles---->');
 t=zpk(z,p,k);
-bode(t);
+bode(t)
 grid on;
 [Gm,Pm,Wgc,Wpc]=margin(t);
 disp(Gm);
