@@ -1,0 +1,23 @@
+% Half wave rectifier with r load
+clc;
+clear;close all; 
+f=500;
+t=linspace(0,1);
+em=230*sqrt(2);
+r=2;
+vs=em*sin(2*pi*t);
+vO=vs.*(vs>=0);
+iO=vO/r;
+vd=vs-vO;
+subplot(2,1,1);
+plot(t,vs);
+title('Half wave rectifier with R load');
+xlabel('time');
+ylabel('amplitude');
+grid;
+subplot(2,1,2);
+plot(t, vO, '-',t,iO,'--',t,vd);
+xlabel('time'); 
+ylabel('amplitude');
+legend('v0','i0','vd');
+grid;

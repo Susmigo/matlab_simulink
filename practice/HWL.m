@@ -1,0 +1,23 @@
+% Half wave rectifier with L load
+clc;
+clear all;
+close all;
+t=linspace(0,1,250);
+em=230*sqrt(2);
+omega=1.0;
+es=em*sin(2*pi*t);
+vO=es.*(es>=0);
+th=t(2)-t(1);
+iO=cumsum(es/omega)*th;
+subplot(2,1,1);
+plot(t,es);
+title('Half wave rectifier with L load');
+xlabel('time');
+ylabel('amplitude');
+grid;
+subplot(2,1,2);
+plot(t, vO, '-',t,iO,'--');
+xlabel('time'); 
+ylabel('amplitude');
+legend('v0','i0');
+grid;
